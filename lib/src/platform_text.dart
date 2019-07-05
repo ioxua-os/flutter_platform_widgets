@@ -8,13 +8,6 @@ import 'package:flutter/widgets.dart';
 
 import 'platform.dart' show isMaterial;
 
-String formatData(String data) {
-  if (isMaterial) {
-    return data?.toUpperCase();
-  }
-  return data;
-}
-
 class PlatformText extends StatelessWidget {
   final Text _text;
 
@@ -33,7 +26,7 @@ class PlatformText extends StatelessWidget {
     StrutStyle strutStyle,
     // 1.6.3 TextWidthBasis textWidthBasis,
   })  : _text = Text(
-          formatData(data),
+          data,
           key: key,
           style: style,
           textAlign: textAlign,
